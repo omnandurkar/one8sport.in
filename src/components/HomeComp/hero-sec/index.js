@@ -76,15 +76,15 @@ const HeroSec = () => {
                     <div className="flex space-x-4">
                         <button
                             onClick={handlePrev}
-                            className="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 transition"
+                            className="bg-gray-900 px-2 py-2 hover:scale-90 rounded-full hover:bg-gray-600 transition"
                         >
-                            <IconArrowLeft className="w-6 h-6" />
+                            <IconArrowLeft className="w-4 h-4" />
                         </button>
                         <button
                             onClick={handleNext}
-                            className="bg-gray-700 px-4 py-2 rounded hover:bg-gray-600 transition"
+                            className="bg-gray-900 px-2 hover:scale-90 py-2 rounded-full hover:bg-gray-600 transition"
                         >
-                            <IconArrowRight className="w-6 h-6" />
+                            <IconArrowRight className="w-4 h-4" />
                         </button>
                     </div>
                 </div>
