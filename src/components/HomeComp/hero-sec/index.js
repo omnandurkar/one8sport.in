@@ -90,7 +90,7 @@ const HeroSec = () => {
                 </div>
 
                 <h1 className="m-10 shadow-md pointer-events-none whitespace-pre-wrap bg-gradient-to-b text-center md:text-start from-white via-gray-400 to-gray-600 bg-clip-text text-3xl font-extrabold leading-none text-transparent">
-                    No need to travel—shine on the field with doorstep coaching!
+                    No need to travel-shine on the field with doorstep coaching!
                 </h1>
 
                 <div className='block md:hidden'>
