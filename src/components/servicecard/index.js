@@ -21,7 +21,7 @@ const ServiceCard = (props) => {
             key={idx}
             onClick={handleOpenDescription}
         >
-            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-black font-semibold">
                 {service.title}
                 {
                     isOpen ? (
@@ -38,7 +38,7 @@ const ServiceCard = (props) => {
                 style={isOpen ? { height: descriptionHeight } : { height: '0px' }}
             >
                 <div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-800">
                         {service.description}
                     </p>
                 </div>

@@ -3,6 +3,9 @@ import { SpotlightPreview } from '../acernityUi/spotlight-comp'
 import WhatWeOffer from '../HomeComp/what-we-offer';
 import TrainingProg from '../HomeComp/training-prog';
 import WhyChooseUs from '../HomeComp/why-choose-us';
+import Image from 'next/image';
+import logo from '../../../public/logo.jpg'
+
 
 const TrainingProgram = () => {
 
@@ -21,10 +24,11 @@ const TrainingProgram = () => {
                 <section className="text-gray-700 body-font">
                     <div className="container px-5 py-24 mx-auto flex flex-wrap">
                         <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-                            <img
+                            <Image
                                 alt="feature"
                                 className="object-cover object-center h-full w-full"
-                                src="https://img.freepik.com/free-photo/soccer-balloon-camp-monochrome-scene-generative-ai_188544-9745.jpg?w=1480&t=st=1723988871~exp=1723989471~hmac=1a8a57a86e1049b252c21656bc7f6cdb2e67b942ac1c644a8a7df0cdb2e02c03"
+                                // src="https://img.freepik.com/free-photo/soccer-balloon-camp-monochrome-scene-generative-ai_188544-9745.jpg?w=1480&t=st=1723988871~exp=1723989471~hmac=1a8a57a86e1049b252c21656bc7f6cdb2e67b942ac1c644a8a7df0cdb2e02c03"
+                                src={logo}
                             />
                         </div>
 

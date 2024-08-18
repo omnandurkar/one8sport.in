@@ -21,7 +21,7 @@ const AboutCard = (props) => {
             key={idx}
             onClick={handleOpenDescription}
         >
-            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-black font-medium">
+            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-black font-semibold">
                 {service.title}
                 {
                     isOpen ? (
