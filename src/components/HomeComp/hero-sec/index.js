@@ -94,7 +94,7 @@ const HeroSec = () => {
                 </h1>
 
                 <div className='block md:hidden'>
-                    <div className="flex justify-center mt-10">
+                    <div className="flex justify-center -mt-5">
                         <button onClick={() => {
                             const element = document.getElementById('about');
                             if (element) {
