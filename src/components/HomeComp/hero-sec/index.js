@@ -34,7 +34,7 @@ const HeroSec = () => {
                 setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
                 setIsTransitioning(false);
             }, 500); // Half the interval duration for the blur effect
-        }, 3000); // Change image every 1 second
+        }, 5000); // Change image every 1 second
 
         return () => clearInterval(interval);
     }, [data.length]);
@@ -56,7 +56,7 @@ const HeroSec = () => {
     };
 
     return (
-        <div className='h-screen p-10'>
+        <div className='min-h-screen flex flex-col py-5 px-10 space-y-5 '>
             <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b text-center md:text-start from-white via-gray-400 to-gray-600 bg-clip-text text-3xl font-extrabold leading-none text-transparent">
                 ONE8SPORT
             </h1>

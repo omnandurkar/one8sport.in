@@ -55,7 +55,7 @@ export default () => {
             title: 'Our Coaches',
             description: `AIFF D License Certification
             Grassroots Football Certification
-            Coaching Experience
+            Coaching Experience - Experienced Coaches
             Competitive Success
             `,
         },
@@ -67,7 +67,7 @@ export default () => {
         {
             title: 'Popular Locations in Pune',
             description: `Sports Location in Magarpatta.
-Sports Location in B+ Kawde Road.
+Sports Location in BT Kawade Road.
 Sports Location in Amanora.
 Sports Location in Undri.
 Sports Location in Kalyani Nagar.`,
