@@ -17,6 +17,8 @@ import Servicecard from '../servicecard'
 import AboutDrag from '../HomeComp/about-drag'
 import { StarsBackground } from '../ui/stars-background'
 import FAQSection from '../faq'
+import Whatsapp from '../HomeComp/Whatsapp'
+import HeroSec from '../HomeComp/hero-sec'
 
 
 const Home = () => {
@@ -36,8 +38,9 @@ const Home = () => {
             {/* bg-gradient-to-b from-black via-black to-gray-700 */}
 
             <div className=' bg-black relative min-h-screen'>
+                <HeroSec />
 
-                <StarsBackground />
+                {/* <StarsBackground /> */}
             </div>
 
 
@@ -65,10 +68,12 @@ const Home = () => {
 
             </div>
 
-            <div className='min-h-screen'>
+            <div className=''>
                 <Contact />
 
             </div>
+
+            <Whatsapp />
 
 
 

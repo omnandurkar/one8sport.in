@@ -9,7 +9,7 @@ const AboutSection = () => {
         <div id='about' className='flex flex-col min-h-screen justify-center items-center'>
             <div data-aos="fade-up" >
 
-                <h1 className="pointer-events-none mt-10 whitespace-pre-wrap bg-gradient-to-b  from-gray-800 via-gray-600 to-gray-400  bg-clip-text text-center lg:text-5xl md:text-3xl text-3xl font-extrabold leading-none text-transparent">
+                <h1 className="pointer-events-none drop-shadow-lg mt-10 whitespace-pre-wrap bg-gradient-to-b  from-gray-800 via-gray-600 to-gray-400  bg-clip-text text-center lg:text-5xl md:text-3xl text-3xl font-extrabold leading-none text-transparent">
                     READY TO LEVEL UP YOUR GAME?
                 </h1>
                 <p className='my-4 text-gray-400 text-center '>Join our network and let's  kick start your sports Journey together. </p>

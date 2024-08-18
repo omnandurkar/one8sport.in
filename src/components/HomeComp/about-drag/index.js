@@ -75,13 +75,13 @@ Sports Location in Kalyani Nagar.`,
     ];
 
     return (
-        <div className="relative pt-6 min-h-screen bg-gray-100 " style={{
+        <div className="relative py-16  bg-gray-100 " style={{
             // background: "linear-gradient(152.92deg, rgba(132, 252, 192, 0.2) 4.54%, rgba(121, 249, 232, 0.17) 34.2%, rgba(132, 252, 192, 0.1) 77.55%)",
         }}>
             <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8 z-20">
                 <div className="space-y-3 text-center">
                     <h1 className="text-3xl text-gray-800 font-semibold">
-                        About 
+                        About Us
                     </h1>
                     <p className="text-gray-600 max-w-lg mx-auto text-lg">
                         Explore the variety of services we offer to help you excel in football.

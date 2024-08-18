@@ -31,15 +31,20 @@ const FAQCompData = [
 const FAQComp = () => {
     return (
         <div id='FAQComp' className='bg-gray-100 py-10'>
-            <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b  from-gray-800 via-gray-600 to-gray-400 bg-clip-text text-center lg:text-5xl md:text-3xl text-3xl font-extrabold leading-none text-transparent">
-                FAQs
-            </h1>
+
+{/* <h1 className="text-3xl text-center text-gray-800 font-semibold">
+                            FAQs
+                        </h1> */}
 
             <section className="text-gray-400 body-font">
                 <div className="container px-0 md:px-5 py-16 mx-auto">
-                    <div className="flex flex-wrap px-5 w-full mb-20 flex-col items-center text-center">
+                    <div className="flex flex-wrap space-y-4 px-5 w-full mb-20 flex-col items-center text-center">
+                        <h1 className="text-3xl text-center text-gray-800 font-semibold">
+                            FAQs
+                        </h1>
+
                         <p className="lg:w-1/2 w-full leading-relaxed text-opacity-80">
-                        Find answers to the most common questions about our services and how you can get involved.
+                            Find answers to the most common questions about our services and how you can get involved.
                         </p>
                     </div>
 
@@ -64,7 +69,7 @@ const FAQComp = () => {
                         ))}
                     </div>
 
-                   
+
                 </div>
             </section>
         </div>
