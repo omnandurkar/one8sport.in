@@ -29,9 +29,7 @@ const ServiceCard = (props) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
                         </svg>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                     )
                 }
             </h4>
@@ -78,7 +76,7 @@ export default () => {
     ];
 
     return (
-        <div id="services" className="py-10  relative bg-gradient-to-br from-gray-200 via-white to-gray-200pt-6 flex justify-center items-center rounded-md " 
+        <div id="services" className="py-10  relative bg-gradient-to-br from-gray-200 via-white to-gray-200pt-6 flex justify-center items-center rounded-md "
         // style={{
         //     background: "linear-gradient(152.92deg, rgba(132, 252, 192, 0.2) 4.54%, rgba(121, 249, 232, 0.17) 34.2%, rgba(132, 252, 192, 0.1) 77.55%)",
         // }}
@@ -94,7 +92,9 @@ export default () => {
                 </div>
                 <div className="mt-14 max-w-2xl mx-auto">
                     {servicesData.map((service, idx) => (
-                        <div key={idx} data-aos="fade-down" data-aos-delay={`${500 + idx * 300}`}>
+                        <div key={idx}
+                        //  data-aos="fade-down" data-aos-delay={`${500 + idx * 300}`}
+                        >
                             <ServiceCard idx={idx} service={service} />
                         </div>
                     ))}

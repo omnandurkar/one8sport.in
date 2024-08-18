@@ -21,7 +21,7 @@ const WhyChooseUsQue = (props) => {
             key={idx}
             onClick={handleOpenDescription}
         >
-            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-black font-medium">
                 {item.title}
                 {
                     isOpen ? (
@@ -29,9 +29,7 @@ const WhyChooseUsQue = (props) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
                         </svg>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                     )
                 }
             </h4>
@@ -40,7 +38,7 @@ const WhyChooseUsQue = (props) => {
                 style={isOpen ? { height: descriptionHeight } : { height: '0px' }}
             >
                 <div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-700">
                         {item.description}
                     </p>
                 </div>
@@ -94,7 +92,9 @@ export default () => {
                 </div>
                 <div className="mt-14 max-w-2xl mx-auto">
                     {WhyChooseUs.map((item, idx) => (
-                        <div key={idx} data-aos="fade-down" data-aos-delay={`${500 + idx * 100}`}>
+                        <div key={idx}
+                        //  data-aos="fade-down" data-aos-delay={`${500 + idx * 100}`}
+                         >
                             <WhyChooseUsQue idx={idx} item={item} />
                         </div>
                     ))}

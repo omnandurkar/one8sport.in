@@ -21,7 +21,7 @@ const AboutCard = (props) => {
             key={idx}
             onClick={handleOpenDescription}
         >
-            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-black font-medium">
                 {service.title}
                 {
                     isOpen ? (
@@ -29,9 +29,7 @@ const AboutCard = (props) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
                         </svg>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                     )
                 }
             </h4>
@@ -40,7 +38,7 @@ const AboutCard = (props) => {
                 style={isOpen ? { height: descriptionHeight } : { height: '0px' }}
             >
                 <div>
-                    <p className="text-gray-600 whitespace-pre-line">
+                    <p className="text-gray-800 whitespace-pre-line">
                         {service.description}
                     </p>
                 </div>
@@ -80,16 +78,18 @@ Sports Location in Kalyani Nagar.`,
         }}>
             <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8 z-20">
                 <div className="space-y-3 text-center">
-                    <h1 className="text-3xl text-gray-800 font-semibold">
+                    <h1 className="text-3xl text-black font-semibold">
                         About Us
                     </h1>
-                    <p className="text-gray-600 max-w-lg mx-auto text-lg">
+                    <p className="text-gray-700 max-w-lg mx-auto text-lg">
                         Explore the variety of services we offer to help you excel in football.
                     </p>
                 </div>
                 <div className="mt-14 max-w-2xl mx-auto">
                     {AboutData.map((service, idx) => (
-                        <div key={idx} data-aos="fade-down" data-aos-delay={`${500 + idx * 300}`}>
+                        <div key={idx}
+                        //  data-aos="fade-down" data-aos-delay={`${500 + idx * 300}`}
+                        >
                             <AboutCard idx={idx} service={service} />
                         </div>
                     ))}

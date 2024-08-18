@@ -23,9 +23,9 @@ import HeroSec from '../HomeComp/hero-sec'
 
 const Home = () => {
 
-    useEffect(() => {
-        Aos.init({ duration: 1000, delay: 300 });
-    })
+    // useEffect(() => {
+    //     Aos.init({ duration: 1000, delay: 300 });
+    // })
 
     return (
         <div id='home'>
