@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import logo from '../../../public/logo.jpg'
+// import logo from '../../../public/logo.jpg'
+import logo from '../../../../public/logo.jpg'
 // import { StarsBackground } from '../ui/stars-background'
 
 

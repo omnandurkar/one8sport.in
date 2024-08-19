@@ -4,14 +4,13 @@ import React, { useEffect } from 'react'
 
 import { FloatingNavDemo } from '../acernityUi/floating-nav-comp'
 import AboutSection from '../HomeComp/about'
-import Services from '../services'
+// import Services from '../services'
 import Contact from '../HomeComp/contact'
 import TrainingProgram from '../training-prog'
-import OurSports from '../our-sports'
-import OurCoaches from '../our-coaches'
 
-import Aos from 'aos';
-import 'aos/dist/aos.css'
+
+// import Aos from 'aos';
+// import 'aos/dist/aos.css'
 
 import Servicecard from '../servicecard'
 import AboutDrag from '../HomeComp/about-drag'
