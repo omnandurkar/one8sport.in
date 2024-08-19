@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "One8Sports Academy",
-  description: "One8 Sports Academy: Excellence in Sports Training and Development.",
+  title: "One8Sport Academy",
+  description: "One8Sport Academy: Excellence in Sports Training and Development.",
   keywords: "sports academy, sports training, athlete development, One8 Sports, Football, Badminton, one8sport",
   author: "Om Nandurakr",
 };

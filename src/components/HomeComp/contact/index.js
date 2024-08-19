@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { StarsBackground } from '../ui/stars-background'
+import { StarsBackground } from '../../ui/stars-background'
 import Image from 'next/image'
 
 
@@ -30,7 +30,7 @@ const Contact = () => {
                         </h1>
 
                         <p className="mb-8 leading-relaxed text-gray-800">
-                            Ready to elevate your football skills? Get in touch with us today to schedule a session or learn more about our programs. 
+                            Ready to elevate your football skills? Get in touch with us today to schedule a session or learn more about our programs.
                         </p>
                         <p className="mb-8 text-gray-600 leading-relaxed">
                             Book a <span className='text-xl font-bold text-gray-700'>Demo</span> Session with us.
