@@ -62,7 +62,7 @@ const Contact = () => {
             </section>
 
             <p className='text-center text-gray-500 font-mono'>Copyright©ones8port 2024</p>
-            <p className="ps-3 text-left text-gray-400 font-mono text-sm">
+            <p className="ps-3 text-center md:text-left text-gray-400 font-mono text-sm">
                 Developed by
                 <a href="https://www.omnandurkar.me" target='_blank' className= " underline text-blue-400 hover:text-gray-600 ml-1">
                     Om Nandurkar
