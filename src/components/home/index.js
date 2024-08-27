@@ -9,8 +9,8 @@ import Contact from '../HomeComp/contact'
 import TrainingProgram from '../training-prog'
 
 
-// import Aos from 'aos';
-// import 'aos/dist/aos.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 import Servicecard from '../servicecard'
 import AboutDrag from '../HomeComp/about-drag'
@@ -22,9 +22,9 @@ import HeroSec from '../HomeComp/hero-sec'
 
 const Home = () => {
 
-    // useEffect(() => {
-    //     Aos.init({ duration: 1000, delay: 300 });
-    // })
+    useEffect(() => {
+        Aos.init({ duration: 1000, delay: 300 });
+    })
 
     return (
         <div id='home'>
@@ -47,7 +47,7 @@ const Home = () => {
                 <AboutSection />
 
             </div>
-            <div className='min-h-screen'>
+            <div className=''>
 
                 <Servicecard />
 

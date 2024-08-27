@@ -76,7 +76,7 @@ export default () => {
     ];
 
     return (
-        <div id="services" className="py-10  relative bg-gradient-to-br from-gray-200 via-white to-gray-200pt-6 flex justify-center items-center rounded-md "
+        <div id="services" className=" relative bg-gradient-to-br from-gray-200 via-white to-gray-200pt-6 flex justify-center items-center rounded-md "
         // style={{
         //     background: "linear-gradient(152.92deg, rgba(132, 252, 192, 0.2) 4.54%, rgba(121, 249, 232, 0.17) 34.2%, rgba(132, 252, 192, 0.1) 77.55%)",
         // }}
