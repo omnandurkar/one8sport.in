@@ -51,8 +51,8 @@ export default () => {
     const AboutData = [
         {
             title: 'Our Coaches',
-            description: `AIFF D License Certification
-            Grassroots Football Certification
+            description: ` Grassroot certified coaches
+            AIFF Licensed coaches
             `,
         },
         {
