@@ -29,7 +29,7 @@ const TrainingProgram = () => {
                                 src={logo}
                                 data-aos="fade-up"
                             /> */}
-                            <div className='p-4 md: py-14 md:px-6 rounded border-2 border-black'>
+                            <div className='p-4 md: py-14 md:px-6 rounded '>
                                 <h1 className="text-4xl md:text-4xl font-bold  text-center bg-clip-text text-blue-600 bg-gradient-to-b from-black via-black to-black bg-opacity-50">
                                     One8sport
                                 </h1>

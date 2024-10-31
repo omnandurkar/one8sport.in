@@ -1,4 +1,4 @@
-import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import img1 from '../../../../public/main.jpg';
@@ -7,92 +7,105 @@ import img3 from '../../../../public/main3.jpg';
 
 const HeroSec = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [progresses, setProgresses] = useState([0, 0, 0]); // Progress for each bar
+    const duration = 9000; // Total duration for each image display
 
     const data = [
-        {
-            image: img1,
-            title: 'Title 1',
-            description: 'Ready to kickstart your journey to greatness.',
-        },
-        {
-            image: img2,
-            title: 'Title 2',
-            description: 'The road to victory starts with the right coach.',
-        },
-        {
-            image: img3,
-            title: 'Title 3',
-            description: 'Dreaming of scoring the winning goals.',
-        },
+        { image: img1, title: 'Title 1', description: 'Ready to kickstart your journey to greatness.' },
+        { image: img2, title: 'Title 2', description: 'The road to victory starts with the right coach.' },
+        { image: img3, title: 'Title 3', description: 'Dreaming of scoring the winning goals.' },
     ];
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIsTransitioning(true);
-            setTimeout(() => {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-                setIsTransitioning(false);
-            }, 500); // Half the interval duration for the blur effect
-        }, 9000); // Change image every 1 second
+        const fillProgress = setInterval(() => {
+            setProgresses((prevProgresses) => {
+                const newProgresses = [...prevProgresses];
+                newProgresses[currentIndex] = Math.min(newProgresses[currentIndex] + (100 / (duration / 100)), 100);
+                return newProgresses;
+            });
+        }, 100);
 
-        return () => clearInterval(interval);
-    }, [data.length]);
+        const autoChange = setInterval(() => {
+            handleNext(); // Automatically change to the next image
+        }, duration);
+
+        return () => {
+            clearInterval(fillProgress);
+            clearInterval(autoChange);
+        };
+    }, [currentIndex]);
 
     const handleNext = () => {
-        setIsTransitioning(true);
-        setTimeout(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-            setIsTransitioning(false);
-        }, 500);
+        setProgresses((prevProgresses) => {
+            const newProgresses = [...prevProgresses];
+            newProgresses[currentIndex] = 100; // Fill the current bar
+            return newProgresses;
+        });
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
     };
 
     const handlePrev = () => {
-        setIsTransitioning(true);
-        setTimeout(() => {
-            setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
-            setIsTransitioning(false);
-        }, 500);
+        setProgresses((prevProgresses) => {
+            const newProgresses = [...prevProgresses];
+            newProgresses[currentIndex] = 0; // Reset current bar
+            return newProgresses;
+        });
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
     };
+
+    // Reset all progress when going back to the first image
+    useEffect(() => {
+        if (currentIndex === 0) {
+            setProgresses([0, 0, 0]);
+        }
+    }, [currentIndex]);
 
     return (
         <div className='min-h-screen flex flex-col py-5 px-10 space-y-5 '>
-            <h1 className="pointer-events-none underline  whitespace-pre-wrap bg-gradient-to-b text-center md:text-start from-white via-gray-400 to-gray-600 bg-clip-text text-4xl font-extrabold leading-none text-transparent">
+            <h1 className="pointer-events-none underline whitespace-pre-wrap bg-gradient-to-b text-center md:text-start from-white via-gray-400 to-gray-600 bg-clip-text text-4xl font-extrabold leading-none text-transparent">
                 One8sport
             </h1>
 
-
-
             <div className='min-h-screen -mt-5 flex flex-col justify-center items-center'>
                 <div className="text-white flex flex-col items-center space-y-4">
-                    <div className={`relative md:w-[26rem] w-64 md:h-[26rem] h-64 mb-5 transition-opacity duration-500 ease-in-out ${isTransitioning ? 'opacity-0 filter blur-sm' : 'opacity-100 filter blur-0'}`}>
+                    <div className={`relative md:w-[26rem] w-64 md:h-[26rem] h-64 mb-5 transition-opacity duration-500 ease-in-out`}>
                         <Image
                             src={data[currentIndex].image}
                             alt={data[currentIndex].title}
                             className="w-full h-full object-cover rounded-lg"
                         />
                     </div>
-                    <p className={`text-lg text-center transition-opacity duration-500 ease-in-out ${isTransitioning ? 'opacity-0 filter blur-sm' : 'opacity-100 filter blur-0'}`}>
+                    <p className={`text-lg text-center`}>
                         {data[currentIndex].description}
                     </p>
+                    <div className="flex space-x-2 mt-4">
+                        {data.map((_, index) => (
+                            <div key={index} className="w-16 h-1 bg-gray-300 rounded-full overflow-hidden">
+                                <div
+                                    className="h-full bg-blue-600 "
+                                    style={{ width: `${progresses[index]}%`, transition: 'width 0.1s linear' }}
+                                />
+                            </div>
+                        ))}
+                    </div>
                     <div className="flex space-x-4">
                         <button
                             onClick={handlePrev}
                             className="bg-gray-900 px-2 py-2 hover:scale-90 rounded-full hover:bg-gray-600 transition"
                         >
-                            <IconArrowLeft className="w-4 h-4" />
+                            <ChevronLeft className="w-4 h-4" />
                         </button>
                         <button
                             onClick={handleNext}
                             className="bg-gray-900 px-2 hover:scale-90 py-2 rounded-full hover:bg-gray-600 transition"
                         >
-                            <IconArrowRight className="w-4 h-4" />
+                            <ChevronRight className="w-4 h-4" />
                         </button>
                     </div>
                 </div>
 
                 <h1 className="m-10 shadow-md pointer-events-none whitespace-pre-wrap bg-gradient-to-b text-center md:text-start from-white via-gray-400 to-gray-600 bg-clip-text text-3xl font-extrabold leading-none text-transparent">
-                    No need to travel-shine on the field with doorstep coaching!
+                    No need to travel—shine on the field with doorstep coaching!
                 </h1>
 
                 <div className='block md:hidden'>
