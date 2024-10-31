@@ -25,7 +25,7 @@ const AboutCard = (props) => {
                 {service.title}
                 {
                     isOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
                         </svg>
                     ) : (
@@ -53,14 +53,11 @@ export default () => {
             title: 'Our Coaches',
             description: `AIFF D License Certification
             Grassroots Football Certification
-            Coaching Experience - Experienced Coaches
-            Competitive Success
             `,
         },
         {
             title: 'Our Sports',
-            description: `Football
-            Badminton`,
+            description: `Football`,
         },
         {
             title: 'Popular Locations in Pune',
@@ -73,12 +70,13 @@ Sports Location in Kalyani Nagar.`,
     ];
 
     return (
-        <div className="relative py-16  bg-gray-100 " style={{
+       <div className="px-5">
+         <div className="relative py-16 px-4 max-lg:border-2 border-black  bg-gray-100 " style={{
             // background: "linear-gradient(152.92deg, rgba(132, 252, 192, 0.2) 4.54%, rgba(121, 249, 232, 0.17) 34.2%, rgba(132, 252, 192, 0.1) 77.55%)",
         }}>
             <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8 z-20">
                 <div className="space-y-3 text-center">
-                    <h1 className="text-3xl text-black font-semibold">
+                <h1 className="text-4xl md:text-4xl font-bold  text-center bg-clip-text text-blue-600 bg-gradient-to-b from-black via-black to-black bg-opacity-50">
                         About Us
                     </h1>
                     <p className="text-gray-700 max-w-lg mx-auto text-lg">
@@ -96,5 +94,6 @@ Sports Location in Kalyani Nagar.`,
                 </div>
             </section>
         </div>
+       </div>
     );
 };

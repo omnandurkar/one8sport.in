@@ -25,7 +25,7 @@ const Contact = () => {
             <section className="text-gray-400 body-font">
                 <div className="container mx-auto flex flex-col px-5 pt-14 justify-center items-center">
                     <div className="w-full md:w-2/3 flex flex-col space-y-4 mb-16 items-center text-center">
-                        <h1 className="text-3xl text-center text-black font-semibold">
+                    <h1 className="text-4xl md:text-4xl font-bold  text-center bg-clip-text text-blue-600 bg-gradient-to-b from-black via-black to-black bg-opacity-50">
                             Contact Us
                         </h1>
 

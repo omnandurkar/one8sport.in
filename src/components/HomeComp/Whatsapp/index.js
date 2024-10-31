@@ -9,7 +9,7 @@ export default function Whatsapp() {
     // };
 
     return (
-        <div className="fixed bottom-5 right-5">
+        <div className="fixed bottom-5 right-5 z-50">
             <a href="https://wa.me/9028119773" target="_blank" rel="Pawan">
                 <img
                     src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png"

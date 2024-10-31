@@ -66,16 +66,8 @@ export default () => {
             description: "Training sessions can be scheduled at your convenience.",
         },
         {
-            title: "State-of-the-Art Equipment",
-            description: "Use of the latest football training tools and technology.",
-        },
-        {
             title: "Progress Tracking",
             description: "Regular assessments to monitor improvement and adjust training plans.",
-        },
-        {
-            title: "Inclusive Environment",
-            description: "Suitable for all ages and skill levels, from beginners to advanced players.",
         },
         {
             title: "Focus on Enjoyment",
@@ -85,10 +77,10 @@ export default () => {
 
 
     return (
-        <div className="relative bg-transparent pt-6 flex justify-center items-center rounded-md " style={{
+        <div className="  relative bg-transparent  flex justify-center items-center rounded-md " style={{
             // background: "linear-gradient(152.92deg, rgba(132, 252, 192, 0.2) 4.54%, rgba(121, 249, 232, 0.17) 34.2%, rgba(132, 252, 192, 0.1) 77.55%)",
         }}>
-            <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8 z-20">
+            <section className="leading-relaxed max-w-screen-xl  mx-auto px-4 md:px-8 z-20">
                 
                 <div className="mt-14 max-w-2xl mx-auto">
                     {WhyChooseUs.map((item, idx) => (

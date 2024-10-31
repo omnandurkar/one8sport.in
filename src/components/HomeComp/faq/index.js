@@ -32,14 +32,14 @@ const FAQComp = () => {
     return (
         <div id='FAQComp' className='bg-gray-100 py-10'>
 
-{/* <h1 className="text-3xl text-center text-gray-800 font-semibold">
+            {/* <h1 className="text-3xl text-center text-gray-800 font-semibold">
                             FAQs
                         </h1> */}
 
             <section className="text-gray-400 body-font">
                 <div className="container px-0 md:px-5 py-16 mx-auto">
                     <div className="flex flex-wrap space-y-4 px-5 w-full mb-20 flex-col items-center text-center">
-                        <h1 className="text-3xl text-center text-black font-semibold">
+                        <h1 className="text-4xl md:text-4xl font-bold  text-center bg-clip-text text-blue-600 bg-gradient-to-b from-black via-black to-black bg-opacity-50">
                             FAQs
                         </h1>
 
@@ -56,7 +56,7 @@ const FAQComp = () => {
 
                                 className="xl:w-1/3 md:w-1/2 p-4    "
                             >
-                                <div className="border  flex flex-col justify-center border-black  bg-white min-w-60 min-h-48 shadow-2xl border-opacity-60 p-6 rounded-2xl">
+                                <div className="border-2  flex flex-col justify-center border-black  bg-white min-w-60 min-h-48 shadow-2xl border-opacity-100 p-6 rounded-2xl">
                                     {/* <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
                                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-6 h-6" viewBox="0 0 24 24">
                                             {service.icon}
