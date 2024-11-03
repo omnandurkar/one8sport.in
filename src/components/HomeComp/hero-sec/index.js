@@ -7,8 +7,8 @@ import img3 from '../../../../public/main3.jpg';
 
 const HeroSec = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [progresses, setProgresses] = useState([0, 0, 0]); // Progress for each bar
-    const duration = 9000; // Total duration for each image display
+    const [progresses, setProgresses] = useState([0, 0, 0]); 
+    const duration = 9000; 
 
     const data = [
         { image: img1, title: 'Title 1', description: 'Ready to kickstart your journey to greatness.' },
@@ -26,7 +26,7 @@ const HeroSec = () => {
         }, 100);
 
         const autoChange = setInterval(() => {
-            handleNext(); // Automatically change to the next image
+            handleNext();
         }, duration);
 
         return () => {
@@ -38,7 +38,7 @@ const HeroSec = () => {
     const handleNext = () => {
         setProgresses((prevProgresses) => {
             const newProgresses = [...prevProgresses];
-            newProgresses[currentIndex] = 100; // Fill the current bar
+            newProgresses[currentIndex] = 100; 
             return newProgresses;
         });
         setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
@@ -47,13 +47,13 @@ const HeroSec = () => {
     const handlePrev = () => {
         setProgresses((prevProgresses) => {
             const newProgresses = [...prevProgresses];
-            newProgresses[currentIndex] = 0; // Reset current bar
+            newProgresses[currentIndex] = 0; 
             return newProgresses;
         });
         setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
     };
 
-    // Reset all progress when going back to the first image
+   
     useEffect(() => {
         if (currentIndex === 0) {
             setProgresses([0, 0, 0]);
