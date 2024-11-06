@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content={metadata.robots} />
         <title>{metadata.title}</title>
 
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
 
         <script type="application/ld+json">
           {JSON.stringify({
